@@ -33,6 +33,10 @@ repls.toggleterm = function(start_line, end_line, repl_args)
   vim.api.nvim_win_set_cursor(current_window, { cursor_line, cursor_col })
 end
 
+repls.molten = function(start_line, end_line, repl_args)
+  vim.fn.MoltenEvaluateRange(start_line, end_line)
+end
+
 -- no repl
 repls.no_repl = function(_) end
 
